@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+ --bar: #b4b0ac;
+}
+
+h1 {
+    text-align: center;
+    color: var(--bar);
+    opacity: .8;
+}
+
+#root {
+    border: 1px solid lightskyblue;
+    position: relative;
+    width: 80vw;
+    margin: auto;
+    height: 50vh;
+}
+
+table {
+    border: none;
+    padding: 0px;
+    display: inline;
+}
+
+td {
+    height: 25px;
+  }
+
+.horizontal-bar {
+    height: 5px;
+    width: 100%;
+    background-color: var(--bar);
+} 
+    
+.bar {
+    background-color: var(--bar);
+    height: 100%;
+    max-width: 5px;
+    position: relative;
+    left: 50%;
+    z-index: 10;
+}
+
+.ball {
+    background-color:  #cabcbc;
+    box-shadow: 5px 5px 5px rgb(131, 116, 116);
+    border-radius: 65%;
+    width: 50px;
+    height: 25px;
+    z-index: 100 !important;
+}
+  
+
+  
