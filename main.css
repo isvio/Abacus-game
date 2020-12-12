@@ -8,12 +8,6 @@ body, html {
     box-sizing: border-box;
 }
 
-h1, div, input, footer {
-    margin-bottom: 1.5rem;
-}
-
-
-
 .hidden {
     display: none;
 }
@@ -33,43 +27,42 @@ h1 {
     position: relative;
     width: 80vw;
     margin: auto;
-    height: 50vh;
-    padding: 1rem;
-}
-
-table {
-    border: none;
-    padding: 0px;
-    display: inline;
-}
-
-td {
-    height: 25px;
-  }
-
-.horizontal-bar {
-    height: 5px;
-    width: 100%;
-    background-color: var(--bar);
-} 
-    
-.bar {
-    background-color: var(--bar);
-    height: 100%;
-    max-width: 5px;
-    position: relative;
-    left: 50%;
-    z-index: 10;
+    height: 260px;
 }
 
 .ball {
     background-color:  #cabcbc;
     box-shadow: 5px 5px 5px rgb(131, 116, 116);
-    border-radius: 65%;
+    border-radius: 100px;
     width: 50px;
     height: 25px;
-    z-index: 100 !important;
 }
+
+table {
+    display: inline-block;
+}
+
+td {
+    height: 25px;
+}
+
+
+.horizontal-bar {
+    height: 5px;
+    width: 100%;
+    margin-top: 2rem;
+    background-color: var(--bar);
+} 
+    
+.bar {
+    background-color: var(--bar);
+     height: 100% !important; 
+    max-width: 5px;
+    position: relative;
+    left: 50%;
+}
+
+
 /* 
 footer {
     text-align: center;
