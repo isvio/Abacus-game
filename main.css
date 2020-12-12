@@ -8,6 +8,16 @@ body, html {
     box-sizing: border-box;
 }
 
+h1, div, input, footer {
+    margin-bottom: 1.5rem;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
 :root {
  --bar: #b4b0ac;
 }
@@ -24,6 +34,7 @@ h1 {
     width: 80vw;
     margin: auto;
     height: 50vh;
+    padding: 1rem;
 }
 
 table {
@@ -59,6 +70,14 @@ td {
     height: 25px;
     z-index: 100 !important;
 }
-  
+/* 
+footer {
+    text-align: center;
+    height: 3vh;
+    margin-top: 100px;
+    font-size: 1rem;
+    color: var(--bar);
+}
+   */
 
   
