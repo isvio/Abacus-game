@@ -273,7 +273,15 @@ document.addEventListener("DOMContentLoaded", function () {
         return Math.floor(Math.random() * parseInt('9'.repeat(nr_columns))) + 1;
     }
     let width = screen.width;
-    let nr_cols = Math.ceil(4 * width / 5 / 60);
+    let nr_cols = 0;
+
+    if (width >= 650) {
+        nr_cols = 10;
+    } else if (width < 340) {
+        nr_cols = 4
+     } else {
+        nr_cols = 5;
+    }
 
     for (let col = 0; col < nr_cols; col++) {
         let obj = new Column();
