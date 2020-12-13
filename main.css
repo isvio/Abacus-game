@@ -89,6 +89,12 @@ td {
     text-align: center;
 }
 
+@media (min-width: 600px) {
+    .numbers-check {
+        width: 450px;
+    }
+}
+
 .numbers-check p {
     font-size: 22px;
     font-weight: bold;
