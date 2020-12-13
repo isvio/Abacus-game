@@ -4,6 +4,8 @@ body, html {
     background-color: var(--primary);
     color: var(--primary);
     user-select: none;
+    height: 100%;
+    overflow: hidden;
 }
 
 * {
@@ -22,11 +24,10 @@ body, html {
 h1 {
     text-align: center;
     color: var(--bar);
-    opacity: .8;
+    opacity: .9;
 }
 
 #root {
-    border: 1px solid lightskyblue; 
     position: relative;
     width: 80vw;
     margin: auto;
@@ -80,43 +81,55 @@ td {
     left: 50%;
 }
 
-button {
-  border: 5px;
-  text-align: center;
-  width: 150px;
-  height: 25px;
-  top: 5px;
-  margin: auto;
-  font-size: 15px;
-  font-weight: 500;
-  position: relative;
-  cursor: pointer;
-  background-color: #61706585;
-  color: #fff;
-  
-}
-
-.numbers-check {
-    background-color: red;
+ .numbers-check {
     display: flex-column;
-    width: 202px;
+    width: 250px;
     height: 150px;
     margin: 10px auto;
     text-align: center;
 }
 
 .numbers-check p {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
+    color: #424242;
+    opacity: .8;
+}
+
+#correct {
+    color: rgb(42, 141, 80);
+    opacity: .2;
+}
+
+#wrong {
+    color: rgb(199, 48, 48);
+    opacity: .2;
 }
 
 .numbers-check button {
     width: 150px;
-    border-radius: 10px;
+    background-color: rgb(90, 156, 218);
+    border: none;
+    text-align: center;
+    height: 25px;
+    top: 5px;
+    margin: auto;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+}
+
+.numbers-check span {
+    color: rgb(200, 99, 176);
+    font-size: 20px;
+    opacity: 1;
+    font-weight: bold;
 }
 
 .numbers-check input {
-    width: 100%;
+    width: 80%;
     height: 30px;
     font-weight: 600;
     font-size: 20px;
@@ -124,14 +137,14 @@ button {
     border: none;
 }
 
-/* 
 footer {
     text-align: center;
-    height: 3vh;
-    margin-top: 100px;
-    font-size: 1rem;
+    position: relative;
+    height: 100px;
+    top: calc(100vh - 500px);
+    font-size: 18px;
     color: var(--bar);
 }
-   */
+
 
   

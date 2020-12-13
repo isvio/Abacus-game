@@ -1,34 +1,12 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    let arr = [];
-    let getNumber = (nr_columns) => {
-        return Math.floor(Math.random() * parseInt('9'.repeat(nr_columns))) + 1;
-    }
-    let width = screen.width;
-    let nr_cols = Math.ceil(4 * width / 5 / 60);
-    let x = getNumber(nr_cols);
-
-    console.log(x);
-    document.getElementById("number").value = x;
-
-    console.log('Width: ' + width);
-    console.log('latime root: ' + 4 * width / 5);
-    console.log('nr coloane: ' + Math.ceil(4 * width / 5 / 60));
-
-    let countDown = document.getElementById("countdown");
-   // console.log(countDown);
-
     class Column {
-        // constructor() {}
         create() {
             let table = document.createElement("table");
-
             let tr = document.createElement("tr"),
-
                 output = document.createElement("td");
-
             output.setAttribute("class", "output");
-            // p.innerHTML = "text";
+            output.innerHTML = '0';
             let col = 0;
             let tr0 = document.createElement("tr"),
                 tr1 = document.createElement("tr"),
@@ -38,27 +16,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 tr5 = document.createElement("tr"),
                 tr6 = document.createElement("tr"),
                 tr7 = document.createElement("tr")
-
             let div0 = document.createElement("div");
             div0.setAttribute("class", "bar");
-
             let div1 = document.createElement("div");
             div1.setAttribute("class", "bar");
-
             let div3 = document.createElement("div");
             div3.setAttribute("class", "bar");
-
             let div4 = document.createElement("div");
             div4.setAttribute("class", "bar");
-
             let div5 = document.createElement("div");
             div5.setAttribute("class", "bar");
-
             let div6 = document.createElement("div");
             div6.setAttribute("class", "bar");
             let div7 = document.createElement("div");
             div7.setAttribute("class", "bar");
-            //////////////////////////////////////////////////////
             let td0 = document.createElement("td");
             div0.classList.add("hidden");
             td0.appendChild(div0);
@@ -72,14 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     div1.classList.add("hidden");
                     col += 5;
                     output.innerHTML = col;
-                    console.log(col);
                 }
             });
-
             let td1 = document.createElement("td");
             td1.appendChild(div1);
             tr1.appendChild(td1);
-
             td1.addEventListener("click", function () {
                 if (td1.classList.contains("ball")) {
                     td0.classList.add("ball");
@@ -88,14 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     div1.classList.remove("hidden");
                     col -= 5;
                     output.innerHTML = col;
-                    console.log(col);
                 }
             });
-            //////////////////////////////////////////////////////////////
             let td2 = document.createElement("td");
             td2.setAttribute("class", "horizontal-bar");
             tr2.appendChild(td2);
-            ////////////////////////////////////////////////////////////////
             let td3 = document.createElement("td");
             td3.appendChild(div3);
             tr3.appendChild(td3);
@@ -107,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     div3.classList.remove("hidden");
                     col -= 1;
                     output.innerHTML = col;
-                    console.log(col);
                 }
                 if (!td5.classList.contains("ball")) {
                     td5.classList.add("ball");
@@ -116,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     div3.classList.remove("hidden");
                     col -= 2;
                     output.innerHTML = col;
-                    console.log(col);
                 }
                 if (!td6.classList.contains("ball")) {
                     td6.classList.add("ball");
@@ -125,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     div3.classList.remove("hidden");
                     col -= 3;
                     output.innerHTML = col;
-                    console.log(col);
                 }
 
                 if (!td7.classList.contains("ball")) {
@@ -135,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     div3.classList.remove("hidden");
                     col -= 4;
                     output.innerHTML = col;
-                    console.log(col);
                 }
             });
             let td4 = document.createElement("td");
@@ -151,7 +112,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     div4.classList.remove("hidden");
                     col += 1;
                     output.innerHTML = col;
-                    console.log(col);
                 }
                 if (!td5.classList.contains("ball")) {
                     td5.classList.add("ball");
@@ -160,7 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     div4.classList.remove("hidden");
                     col -= 1;
                     output.innerHTML = col;
-                    console.log(col);
                 }
                 if (!td6.classList.contains("ball")) {
                     td6.classList.add("ball");
@@ -169,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     div4.classList.remove("hidden");
                     col -= 2;
                     output.innerHTML = col;
-                    console.log(col);
                 }
                 if (!td7.classList.contains("ball")) {
                     td7.classList.add("ball");
@@ -178,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     div4.classList.remove("hidden");
                     col -= 3;
                     output.innerHTML = col;
-                    console.log(col);
                 }
             });
             let td5 = document.createElement("td");
@@ -194,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     div5.classList.remove("hidden");
                     col += 2;
                     output.innerHTML = col;
-                    console.log(col);
                 }
                 if (!td4.classList.contains("ball")) {
                     td4.classList.add("ball");
@@ -203,7 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     div5.classList.remove("hidden");
                     col += 1;
                     output.innerHTML = col;
-                    console.log(col);
                 }
                 if (!td6.classList.contains("ball")) {
                     td6.classList.add("ball");
@@ -212,7 +167,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     div5.classList.remove("hidden");
                     col -= 1;
                     output.innerHTML = col;
-                    console.log(col);
 
                 }
                 if (!td7.classList.contains("ball")) {
@@ -222,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     div5.classList.remove("hidden");
                     col -= 2;
                     output.innerHTML = col;
-                    console.log(col);
                 }
             });
             let td6 = document.createElement("td");
@@ -244,18 +197,24 @@ document.addEventListener("DOMContentLoaded", function () {
                     div4.classList.add("hidden");
                     td6.classList.remove("ball");
                     div6.classList.remove("hidden");
+                    col += 2;
+                    output.innerHTML = col;
                 }
                 if (!td5.classList.contains("ball")) {
                     td5.classList.add("ball");
                     div5.classList.add("hidden");
                     td6.classList.remove("ball");
                     div6.classList.remove("hidden");
+                    col += 1;
+                    output.innerHTML = col;
                 }
                 if (!td7.classList.contains("ball")) {
                     td7.classList.add("ball");
                     div7.classList.add("hidden");
                     td6.classList.remove("ball");
                     div6.classList.remove("hidden");
+                    col -= 1;
+                    output.innerHTML = col;
                 }
             });
             let td7 = document.createElement("td");
@@ -271,7 +230,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     div7.classList.remove("hidden");
                     col += 4;
                     output.innerHTML = col;
-                    console.log(col);
                 }
                 if (!td4.classList.contains("ball")) {
                     td4.classList.add("ball");
@@ -280,19 +238,22 @@ document.addEventListener("DOMContentLoaded", function () {
                     div7.classList.remove("hidden");
                     col += 3;
                     output.innerHTML = col;
-                    console.log(col);
                 }
                 if (!td5.classList.contains("ball")) {
                     td5.classList.add("ball");
                     div5.classList.add("hidden");
                     td7.classList.remove("ball");
                     div7.classList.remove("hidden");
+                    col += 2;
+                    output.innerHTML = col;
                 }
                 if (!td6.classList.contains("ball")) {
                     td6.classList.add("ball");
                     div6.classList.add("hidden");
                     td7.classList.remove("ball");
                     div7.classList.remove("hidden");
+                    col += 1;
+                    output.innerHTML = col;
                 }
             });
             table.appendChild(tr0);
@@ -307,26 +268,43 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("root").appendChild(table);
         }
     }
-    let nrOfColumns = Math.ceil(4 * width / 5 / 60);
-    for (let col = 0; col < nrOfColumns; col++) {
+
+    let getNumber = (nr_columns) => {
+        return Math.floor(Math.random() * parseInt('9'.repeat(nr_columns))) + 1;
+    }
+    let width = screen.width;
+    let nr_cols = Math.ceil(4 * width / 5 / 60);
+
+    for (let col = 0; col < nr_cols; col++) {
         let obj = new Column();
         obj.create();
     }
 
+    let x = getNumber(nr_cols);
+
+    let correct = document.getElementById("correct");
+    let wrong = document.getElementById("wrong");
+    let num = document.getElementById("number");
+    num.value = x;
+
+    document.getElementById("new-number").addEventListener("click", function () {
+        x = getNumber(nr_cols);
+        num.value = x;
+    })
     document.getElementById("verify").addEventListener("click", function () {
+        correct.style.opacity = ".2";
+        wrong.style.opacity = ".2";
         let result = document.getElementsByClassName("output");
         let st = [];
         for (let i = 0; i < result.length; i++) {
             st.push(result[i].innerHTML);
         }
         let nr = parseInt(st.splice(',').join(""));
-        console.log(typeof (nr));
-        console.log('The number is: ' + nr);
         if (nr === x) {
-            console.log("succes");
+            correct.style.opacity = "1";
 
         } else {
-            console.log("fail");
+            wrong.style.opacity = "1";
         }
     })
 });
