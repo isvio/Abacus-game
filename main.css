@@ -105,11 +105,13 @@ td {
 #correct {
     color: rgb(42, 141, 80);
     opacity: .2;
+    font-family: sans-serif;
 }
 
 #wrong {
     color: rgb(199, 48, 48);
     opacity: .2;
+    font-family: sans-serif;
 }
 
 .numbers-check button {
@@ -151,6 +153,18 @@ footer {
     font-size: 18px;
     color: var(--bar);
 }
-
-
-  
+#verify{
+    width: 135px;
+    height: 25px;
+    background-color: rgb(78, 150, 218);
+    font-family: sans-serif;
+    font-size: 16px;
+    left: calc((100vw - 150px) / 2);
+    position: absolute;
+}
+#verify-btn-text{
+    color: white;
+    font-size: 15px;
+    position: relative;
+    bottom: 11px;
+}
